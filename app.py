@@ -1,3 +1,4 @@
+import params as p
 from googleapiclient.discovery import build
 from google.oauth2 import service_account
 from oauth2client import client
@@ -10,9 +11,8 @@ import argparse
 from oauth2client import tools
 
 INPUT_FILE="input/urls_list.csv"
-cuenta='eventflare'
-authorized='authorizedcreds_'+cuenta+'.dat' #guardará credenciales cuando nos hayamos logado
-key='../credentials/client_secrets_'+cuenta+'.json'
+authorized='authorizedcreds_'+p.cuenta+'.dat' #guardará credenciales cuando nos hayamos logado
+key='../credentials/client_secrets_'+p.cuenta+'.json'
 
 
 def authorize_creds(creds,authorizedcreds=authorized):
